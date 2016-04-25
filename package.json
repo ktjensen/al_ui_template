@@ -1,11 +1,8 @@
 {
   "name": "AL-UI-Template",
-  "homepage": "https://github.com/alertlogic/al_ui_template",
+  "homepage": "https://github.com/ktjensen/al_ui_template",
   "author": "Barry Skidmore <bskidmore@alertlogic.com>",
   "description": "Base framework for Cloud Insight UI Development.",
-  "bugs": {
-    "url": "https://algithub.pd.alertlogic.net/defender/al_ui_template/issues"
-  },
   "scripts": {
     "build": "npm run less && npm run test && grunt install && node build/build.js && node build/zip.js",
     "translations": "grunt install && node build/build.js",
@@ -32,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:alertlogic/al_ui_template.git"
+    "url": "git@github.com:ktjensen/al_ui_template.git"
   },
   "version": "2.1.0",
   "license": "MIT",

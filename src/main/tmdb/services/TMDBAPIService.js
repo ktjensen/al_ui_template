@@ -15,11 +15,11 @@
  *
  */
 
-define( [ 'angular', 
+define( [ 'angular',
           'ngRoute',
           'ngResource',
           'LocalStorageModule',
-          'config/config' ], 
+          'config/config' ],
     function ( angular ) {
         "use strict";
 
@@ -203,5 +203,5 @@ define( [ 'angular',
         TMDBAPIService.$inject = [ '$rootScope', '$http', '$timeout', '$resource', 'localStorageService', '$location' ];
 
         return TMDBAPIService;
-}
+    }
 );
