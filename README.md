@@ -4,6 +4,8 @@
 
 ### Requirements
 
+#### OS X Instructions
+
 - You must have XCode installed and accept the licensing agreement before continuing with this document.  Be advised that XCode is a massive download!
 - You must have a [Github](https://github.com/) account, with SSH keys configured.
 
@@ -28,6 +30,10 @@
     ```$ echo 'ulimit -n 32768' | sudo tee -a /etc/profile```
 
     Please note: you MUST reboot for these changes to be effective.
+
+#### Linux Instructions
+
+- You must have Node installed. Use your package manager.
 
 ### Setting Up Your Development Environment
 

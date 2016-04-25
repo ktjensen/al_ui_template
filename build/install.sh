@@ -41,8 +41,8 @@ ALUITEMPLATE_DIR=$PWD
 NODE=`which node`
 if [ -z $NODE ]
     then
-        echo -e "${yellow}NodeJS not found, Installing.${NC}"
-        brew install node
+        echo -e "${yellow}NodeJS not found, please install.${NC}"
+        exit 1
     else
         echo -e "${blue}Found NodeJS at $NODE${NC}"
 fi
