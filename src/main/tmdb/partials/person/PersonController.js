@@ -22,6 +22,7 @@ define( [ 'angular', 'tmdb/services/TMDBAPIService', 'ngRoute', 'config/config' 
         var PersonController = function ($scope, TMDBAPIService, $routeParams) {
             $scope.personDetails = {};
             $scope.imgPath = config.apiImg;
+            $scope.noPosterImage = "https://assets.tmdb.org/assets/f996aa2014d2ffddfda8463c479898a3/images/no-poster-w185.jpg";
 
             TMDBAPIService.Person().person.person($routeParams.id).then( function (res) {
                 $scope.personDetails = res.data;

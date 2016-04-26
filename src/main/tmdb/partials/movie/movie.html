@@ -34,7 +34,7 @@
             <div class="pull-left margin-l-md margin-t-md poster-tile" ng-repeat="cast in movieDetails.credits.cast">
                 <a href="#/person/{{ cast.id }}">
                     <img class="rounded-edges" ng-src="{{cast.profile_path ? imgPath + cast.profile_path : noProfileImage}}" width="150">
-                    <p class="poster-width">{{ cast.name }} as {{ cast.character }}</p>
+                    <p class="poster-width">{{ cast.name }}<span ng-if="cast.character"> as {{ cast.character }}</span></p>
                 </a>
             </div>
         </div>
