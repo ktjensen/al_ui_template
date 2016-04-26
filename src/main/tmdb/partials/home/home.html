@@ -1,5 +1,5 @@
 <div class="popular-movies" ng-if="popMovieList">
-    <h1>Explore Popular Movies</h1>
+    <h1 class="margin-md">Explore Popular Movies</h1>
     <div ng-repeat="movie in popMovieList track by $index">
         <a href="#/movie/{{ movie.id }}" title="{{ movie.title }}" class="pull-left margin-t-md margin-l-md" ng-if="movie.poster_path && imgPath">
             <img class="rounded-edges" src="{{ imgPath }}{{ movie.poster_path }}" width="150" height="225" title="{{ movie.title }}" />
