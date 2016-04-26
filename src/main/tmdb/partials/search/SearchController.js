@@ -30,6 +30,8 @@ define( ['angular','tmdb/services/TMDBAPIService'],
             };
         };
 
+        SearchController.$inject = [ '$scope', 'TMDBAPIService' ];
+
         return SearchController;
     }
 );

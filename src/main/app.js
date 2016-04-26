@@ -17,9 +17,10 @@ define([
     'tmdb/services/TMDBAPIService',
     'tmdb/partials/home/HomeController',
     'tmdb/partials/search/SearchController',
+    'tmdb/partials/movie/MovieController',
     'tmdb/directives/search.js'
 ], function( angular, config, $resource, $location, TMDBAPIService,
-    HomeController, SearchController,
+    HomeController, SearchController, MovieController,
     tmdbSearch) {
         "use strict";
 
@@ -31,11 +32,13 @@ define([
         app.service('TMDBAPIService', TMDBAPIService);
         app.controller('HomeController', HomeController);
         app.controller('SearchController', SearchController);
+        app.controller('MovieController', MovieController);
         app.directive('tmdbSearch', tmdbSearch);
 
         // Configure $routeProvider to serve Angular content.
         app.config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when( '/', { templateUrl: '/tmdb/partials/home/home.html', controller: 'HomeController' } );
+            $routeProvider.when( '/movie/:id', { templateUrl: '/tmdb/partials/movie/movie.html', controller: 'MovieController' } );
             $routeProvider.otherwise({ redirectTo: '/' });
         }]);
 

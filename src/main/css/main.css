@@ -5,6 +5,12 @@
 .margin-r-md { margin-right: 10px; }
 .margin-t-md { margin-top: 10px; }
 .margin-b-md { margin-bottom: 10px; }
+.margin-md { margin: 10px; }
+.margin-l-sm { margin-left: 5px; }
+.margin-r-sm { margin-right: 5px; }
+.margin-t-sm { margin-top: 5px; }
+.margin-b-sm { margin-bottom: 5px; }
+.margin-sm { margin: 5px; }
 
 .pop-up-dialogue {
     border-radius: 0 0 5px 5px;
@@ -22,3 +28,5 @@
 .poster-width { width: 150px; }
 
 .rounded-edges { border-radius: 5px; }
+
+.table-auto { width: auto !important; }
