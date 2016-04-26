@@ -34,3 +34,5 @@
 .table-auto { width: auto !important; }
 
 .td-max-width { max-width: 150px; }
+
+.poster-tile { width: 150px; height: 295px; }

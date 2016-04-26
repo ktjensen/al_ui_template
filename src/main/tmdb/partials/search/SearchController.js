@@ -16,8 +16,6 @@ define( [ 'angular', 'tmdb/services/TMDBAPIService', 'config/config' ],
     function( angular, TMDBAPIService, config ) {
         "use strict";
 
-        console.log(config);
-
         var SearchController = function ($scope, TMDBAPIService) {
             $scope.searchQuery = "";
             $scope.queryResults = [];
