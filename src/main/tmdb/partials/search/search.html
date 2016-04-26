@@ -2,7 +2,7 @@
     <input class="form-control" placeholder="Search for Actor or Movie" ng-model="searchQuery" ng-change="search()" />
     <div ng-if="queryResults.length > 0" class="pop-up-dialogue">
         <div ng-repeat="result in queryResults">
-            <a href="#/movie/{{ result.id }}">{{ result.title ? result.title : result.name }}</a>
+            <a href="#/{{ result.title ? 'movie' : 'person' }}/{{ result.id }}">{{ result.title ? result.title : result.name }}</a>
         </div>
     </div>
 </div>

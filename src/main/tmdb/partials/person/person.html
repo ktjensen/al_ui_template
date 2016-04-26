@@ -1,0 +1,22 @@
+<div class="person-controller margin-md">
+    <div class="pull-right margin-sm">
+        <img class="rounded-edges" src="{{ imgPath }}{{ personDetails.images.profiles[0].file_path }}" />
+    </div>
+    <table class="table table-striped table-auto pull-right margin-t-sm">
+        <tr>
+            <td>Birthday</td>
+            <td>{{ personDetails.birthday | date }}</td>
+        </tr><tr ng-if="personDetails.deathday">
+            <td>Deathday</td>
+            <td>{{ personDetails.deathDay | date }}</td>
+        </tr><tr>
+            <td>Gender</td>
+            <td>{{ personDetails.gender === 2 ? 'Male' : 'Female' }}</td>
+        </tr><tr ng-if="personDetails.place_of_birth">
+            <td>Place of Birth</td>
+            <td>{{ personDetails.place_of_birth }}</td>
+        </tr>
+    </table>
+    <h1>{{ personDetails.name }}</h1>
+    <p ng-if="personDetails.biography">{{ personDetails.biography }}</p>
+</div>
