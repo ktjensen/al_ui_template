@@ -1,1 +1,8 @@
-Test content. {{data}}
+<div class="popular-movies" ng-if="popMovieList">
+    <h1>Explore Popular Movies</h1>
+    <div ng-repeat="movie in popMovieList track by $index">
+        <a href="#" title="{{ movie.title }}" ng-if="movie.poster_path && imgPath">
+            <img class="pull-left margin-t-md margin-l-md" src="{{ imgPath }}{{ movie.poster_path }}" width="150" height="225" title="{{ movie.title }}" />
+        </a>
+    </div>
+</div>
