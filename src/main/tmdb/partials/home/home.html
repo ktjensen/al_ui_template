@@ -2,8 +2,8 @@
     <h1 class="margin-md">Explore Popular Movies</h1>
     <div ng-repeat="movie in popMovieList track by $index">
         <a href="#/movie/{{ movie.id }}" title="{{ movie.title }}" class="pull-left margin-t-md margin-l-md" ng-if="movie.poster_path && imgPath">
-            <img class="rounded-edges" ng-src="{{ imgPath }}{{ movie.poster_path }}" width="150" height="225" title="{{ movie.title }}" />
-            <div class="poster-width">
+            <div class="poster-tile">
+                <img class="rounded-edges" ng-src="{{ imgPath }}{{ movie.poster_path }}" width="150" height="225" title="{{ movie.title }}" />
                 <span style="text-align:center;">{{movie.title}}</span>
             </div>
         </a>
