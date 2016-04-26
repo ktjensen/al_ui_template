@@ -3,11 +3,11 @@
     <div ng-if="queryResults.length > 0 && (focus.input || focus.popup)" class="pop-up-dialogue" ng-mouseover="focus.popup=true" ng-mouseout="focus.popup=false">
         <div ng-repeat="result in queryResults">
             <a ng-if="result.media_type === 'movie'" href="#/movie/{{ result.id }}">
-                <img ng-if="result.poster_path" src="{{ imgPath }}{{ result.poster_path }}" width="25" />
+                <img ng-if="result.poster_path" ng-src="{{ imgPath }}{{ result.poster_path }}" width="25" />
                 <span>{{ result.title }}<span ng-if="result.release_date"> ({{ result.release_date |  date:'yyyy' }})</span></span>
             </a>
             <a ng-if="result.media_type === 'person'" href="#/person/{{ result.id }}">
-                <img ng-if="result.profile_path" src="{{ imgPath }}{{ result.profile_path }}" width="25" />
+                <img ng-if="result.profile_path" ng-src="{{ imgPath }}{{ result.profile_path }}" width="25" />
                 <span>{{ result.name }}</span>
             </a>
         </div>
