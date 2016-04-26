@@ -1,6 +1,6 @@
 <div class="tmdb-search-directive">
-    <input class="form-control" placeholder="Search for Actor or Movie" ng-model="searchQuery" ng-change="search()" />
-    <div ng-if="queryResults.length > 0" class="pop-up-dialogue">
+    <input class="form-control" placeholder="Search for Actor or Movie" ng-model="searchQuery" ng-change="search()" ng-focus="focus.input=true" ng-blur="focus.input=false" />
+    <div ng-if="queryResults.length > 0 && (focus.input || focus.popup)" class="pop-up-dialogue" ng-mouseover="focus.popup=true" ng-mouseout="focus.popup=false">
         <div ng-repeat="result in queryResults">
             <a href="#/{{ result.title ? 'movie' : 'person' }}/{{ result.id }}">{{ result.title ? result.title : result.name }}</a>
         </div>

@@ -18,6 +18,7 @@ define( ['angular','tmdb/services/TMDBAPIService'],
         var SearchController = function ($scope, TMDBAPIService) {
             $scope.searchQuery = "";
             $scope.queryResults = [];
+            $scope.focus = { popup: false, input: false };
 
             $scope.search = function () {
                 if ($scope.searchQuery) {
