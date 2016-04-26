@@ -13,7 +13,19 @@
 </head>
 
 <body>
-    <!-- Need a header here -->
+    <!-- Header -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/">TMDB Example</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <tmdb-search></tmdb-search>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Angular page view -->
     <ng-view></ng-view>

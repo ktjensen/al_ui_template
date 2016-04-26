@@ -16,7 +16,11 @@ define([
     'angular', 'config/config', 'ngRoute', 'ngResource',
     'tmdb/services/TMDBAPIService',
     'tmdb/partials/home/HomeController',
-], function( angular, config, $resource, $location, TMDBAPIService, HomeController ) {
+    'tmdb/partials/search/SearchController',
+    'tmdb/directives/search.js'
+], function( angular, config, $resource, $location, TMDBAPIService,
+    HomeController, SearchController,
+    tmdbSearch) {
         "use strict";
 
         var app = angular.module("app", config.standardAngularModules );
@@ -26,6 +30,8 @@ define([
 
         app.service('TMDBAPIService', TMDBAPIService);
         app.controller('HomeController', HomeController);
+        app.controller('SearchController', SearchController);
+        app.directive('tmdbSearch', tmdbSearch);
 
         // Configure $routeProvider to serve Angular content.
         app.config(['$routeProvider', function ($routeProvider) {
