@@ -7,12 +7,12 @@
 .margin-b-md { margin-bottom: 10px; }
 
 .pop-up-dialogue {
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
     width: 500px;
     padding: 5px;
     position: absolute;
     right: 15px;
-    top: 55px;
+    top: 40px;
     background: #FFF;
     box-shadow: 5px 5px 25px 5px #DDD;
 }
