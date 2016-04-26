@@ -32,8 +32,10 @@
         <div class="movie-section">
             <h4 class="margin-l-md">Cast</h4>
             <div class="pull-left margin-l-md margin-t-md poster-tile" ng-repeat="cast in movieDetails.credits.cast">
-                <img class="rounded-edges" ng-src="{{cast.profile_path ? imgPath + cast.profile_path : noProfileImage}}" width="150">
-                <p class="poster-width">{{ cast.name }} as {{ cast.character }}</p>
+                <a href="#/person/{{ cast.id }}">
+                    <img class="rounded-edges" ng-src="{{cast.profile_path ? imgPath + cast.profile_path : noProfileImage}}" width="150">
+                    <p class="poster-width">{{ cast.name }} as {{ cast.character }}</p>
+                </a>
             </div>
         </div>
     </div>
