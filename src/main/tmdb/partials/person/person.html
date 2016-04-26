@@ -1,6 +1,6 @@
 <div class="person-controller margin-md">
     <div class="pull-right margin-sm">
-        <img class="rounded-edges" src="{{ imgPath }}{{ personDetails.images.profiles[0].file_path }}" />
+        <img ng-if="personDetails.images.profiles[0].file_path" class="rounded-edges" src="{{ imgPath }}{{ personDetails.images.profiles[0].file_path }}" />
     </div>
     <div>
         <div class="movie-section">
