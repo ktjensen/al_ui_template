@@ -21,6 +21,8 @@
     top: 40px;
     background: #FFF;
     box-shadow: 5px 5px 25px 5px #DDD;
+    border: 1px solid #AAA;
+    border-top: 0;
 }
 
 .tmdb-search-directive > input { width: 500px; }

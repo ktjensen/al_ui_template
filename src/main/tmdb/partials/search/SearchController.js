@@ -3,6 +3,7 @@
  *
  * @requires angular
  * @requires TMDBAPIService
+ * @requires config
  *
  * @returns Instance of the Search Controller
  *
@@ -11,14 +12,17 @@
  * @copyright Alert Logic, Inc 2016
  */
 
-define( ['angular','tmdb/services/TMDBAPIService'],
-    function( angular, TMDBAPIService ) {
+define( [ 'angular', 'tmdb/services/TMDBAPIService', 'config/config' ],
+    function( angular, TMDBAPIService, config ) {
         "use strict";
+
+        console.log(config);
 
         var SearchController = function ($scope, TMDBAPIService) {
             $scope.searchQuery = "";
             $scope.queryResults = [];
             $scope.focus = { popup: false, input: false };
+            $scope.imgPath = config.apiImg;
 
             $scope.search = function () {
                 if ($scope.searchQuery) {

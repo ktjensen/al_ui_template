@@ -2,7 +2,14 @@
     <input class="form-control" placeholder="Search for Actor or Movie" ng-model="searchQuery" ng-change="search()" ng-focus="focus.input=true" ng-blur="focus.input=false" />
     <div ng-if="queryResults.length > 0 && (focus.input || focus.popup)" class="pop-up-dialogue" ng-mouseover="focus.popup=true" ng-mouseout="focus.popup=false">
         <div ng-repeat="result in queryResults">
-            <a href="#/{{ result.title ? 'movie' : 'person' }}/{{ result.id }}">{{ result.title ? result.title : result.name }}</a>
+            <a ng-if="result.media_type === 'movie'" href="#/movie/{{ result.id }}">
+                <img ng-if="result.poster_path" src="{{ imgPath }}{{ result.poster_path }}" width="25" />
+                <span>{{ result.title }}<span ng-if="result.release_date"> ({{ result.release_date |  date:'yyyy' }})</span></span>
+            </a>
+            <a ng-if="result.media_type === 'person'" href="#/person/{{ result.id }}">
+                <img ng-if="result.profile_path" src="{{ imgPath }}{{ result.profile_path }}" width="25" />
+                <span>{{ result.name }}</span>
+            </a>
         </div>
     </div>
 </div>
