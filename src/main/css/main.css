@@ -30,3 +30,5 @@
 .rounded-edges { border-radius: 5px; }
 
 .table-auto { width: auto !important; }
+
+.tmdb-genres { max-width: 150px; }
